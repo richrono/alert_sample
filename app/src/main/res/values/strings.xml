@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">alert_sample</string>
+    <string name="pop_alert">POP ALERT</string>
+    <string name="bushi">TODO</string>
+</resources>
