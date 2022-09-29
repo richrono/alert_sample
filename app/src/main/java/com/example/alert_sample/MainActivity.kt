@@ -1,9 +1,14 @@
 package com.example.alert_sample
 
 import android.annotation.SuppressLint
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
@@ -95,6 +100,20 @@ class MainActivity : AppCompatActivity() {
                 .setNegativeButton(" ", null)
                 .show()
         }
+
+////        ボタン３つめ　ImgButtonのフラグメントを呼び出す
+//        val transaction = supportFragmentManager.beginTransaction()
+        val btnThird: Button = findViewById(R.id.btnThird)
+//        val fragmentLayout = layoutInflater.inflate(R.layout.view_img_button, null)
+        btnThird.setOnClickListener {
+            NewsFragment()
+                .onCreateView(layoutInflater, null, null)
+        }
+//                btnThird.setOnClickListener {
+//            val aiueo = NewsFragment()
+//            aiueo.onCreateView(layoutInflater,null,null)
+//        }
+
     }
 }
 

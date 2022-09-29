@@ -2,4 +2,6 @@
     <string name="app_name">alert_sample</string>
     <string name="pop_alert">POP ALERT</string>
     <string name="bushi">TODO</string>
+    <string name="pop_fragment">POP FRAGMENT</string>
+    <string name="pop_alert_dialog">POP ALERT DIALOG</string>
 </resources>

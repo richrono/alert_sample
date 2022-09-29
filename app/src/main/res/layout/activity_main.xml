@@ -31,9 +31,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="POP ALERT FRAGMENT"
+        android:text="@string/pop_alert_dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAlert" />
 
+    <Button
+        android:id="@+id/btnThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/pop_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFragment" />
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragmentContainerView"-->
+<!--        android:name="com.example.alert_sample.NewsFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.fragment.app.FragmentContainerView -->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:id="@+id/fragment"-->
+<!--    android:name="com.example.alert_sample.NewsFragment"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintBottom_toTopOf="parent"-->
+<!--    app:layout_constraintRight_toLeftOf="parent"-->
+<!--    app:layout_constraintRight_toRightOf="parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android" />-->
