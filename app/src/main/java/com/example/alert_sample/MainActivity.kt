@@ -4,9 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.DialogFragment
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("ResourceType")
@@ -14,14 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//ボタン１つめ
+//ボタン１つめ　上のボタンを押すと表示される純粋なダイアログサンプル
         val btnAlertDialog: Button = findViewById(R.id.btnAlert)
 
         btnAlertDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("タイトル")
                 .setMessage("内容")
-                .setNegativeButton("閉じる",null)
+                .setNegativeButton("閉じる", null)
                 .setCancelable(false)
                 .show()
         }
@@ -84,12 +82,12 @@ class MainActivity : AppCompatActivity() {
 ////            .getButton(findViewById(R.id.alertDismiss))
 ////        setFinishOnTouchOutside(true)
 
-//ボタン無し改
-        AlertDialog.Builder(this,R.style.ImageAlertDialog)
+//ボタン無し改　アプリ起動時に自動で表示されるダイアログ（theme.xmlにてデザインをカスタマイズ）
+        AlertDialog.Builder(this, R.style.ImageAlertDialog)
             .setCancelable(false)
-            .setNegativeButton(" ",null)
+            .setNegativeButton(" ", null)
             .show()
-//ボタン有り（２つめ）
+//ボタン有り（２つめ）　下のボタンを押すと表示されるダイアログ（theme.xmlにてデザインをカスタマイズ(上記と同一部品)）
         val btnAlertFragment: Button = findViewById(R.id.btnFragment)
         btnAlertFragment.setOnClickListener {
             AlertDialog.Builder(this, R.style.ImageAlertDialog)

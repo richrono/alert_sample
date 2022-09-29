@@ -17,6 +17,9 @@
     <style name="ImageAlertDialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="buttonBarNegativeButtonStyle">@style/buttonBarButtonstyle.Negative</item>
         <item name="android:background">@drawable/bushi_yoroikabuto</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+<!--        <item name="android:background">@drawable/bushi_yoroikabuto</item>-->
 <!--        <item name="android:windowNoTitle">true</item>-->
 <!--        <item name="android:windowBackground">@drawable/bushi_yoroikabuto</item>-->
 <!--        <item name="android:textColor">@android:color/transparent</item>-->
@@ -25,8 +28,8 @@
 <!--        <item name="android:backgroundTint">@android:color/transparent</item>-->
     </style>
 
+    <!--    <style name="buttonBarButtonstyle" parent="Widget.AppCompat.Button.Colored">-->
     <style name="buttonBarButtonstyle" parent="Widget.AppCompat.Button.Borderless.Colored">
-<!--    <style name="buttonBarButtonstyle" parent="Widget.AppCompat.Button.Colored">-->
     </style>
     <style name="buttonBarButtonstyle.Negative">
         <item name="android:textColor">@android:color/transparent</item>
