@@ -88,10 +88,10 @@ class MainActivity : AppCompatActivity() {
 ////        setFinishOnTouchOutside(true)
 
 //ボタン無し改　アプリ起動時に自動で表示されるダイアログ（theme.xmlにてデザインをカスタマイズ）
-        AlertDialog.Builder(this, R.style.ImageAlertDialog)
-            .setCancelable(false)
-            .setNegativeButton(" ", null)
-            .show()
+//        AlertDialog.Builder(this, R.style.ImageAlertDialog)
+//            .setCancelable(false)
+//            .setNegativeButton(" ", null)
+//            .show()
 //ボタン有り（２つめ）　下のボタンを押すと表示されるダイアログ（theme.xmlにてデザインをカスタマイズ(上記と同一部品)）
         val btnAlertFragment: Button = findViewById(R.id.btnFragment)
         btnAlertFragment.setOnClickListener {
@@ -106,8 +106,9 @@ class MainActivity : AppCompatActivity() {
         val btnThird: Button = findViewById(R.id.btnThird)
 //        val fragmentLayout = layoutInflater.inflate(R.layout.view_img_button, null)
         btnThird.setOnClickListener {
-            NewsFragment()
-                .onCreateView(layoutInflater, null, null)
+            val dialog = NewsFragment()
+                dialog.show(supportFragmentManager,"")
+//                .onCreateView(layoutInflater, null, null)
         }
 //                btnThird.setOnClickListener {
 //            val aiueo = NewsFragment()
