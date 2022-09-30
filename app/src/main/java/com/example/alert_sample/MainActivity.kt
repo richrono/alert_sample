@@ -1,14 +1,9 @@
 package com.example.alert_sample
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
@@ -17,9 +12,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+//ボタン無し　アプリ起動時に自動で表示されるフラグメント（fragment_news.xmlにてレイアウト）
+        val dialog = NewsFragment()
+        dialog.show(supportFragmentManager, "")
+
 //ボタン１つめ　上のボタンを押すと表示される純粋なダイアログサンプル
         val btnAlertDialog: Button = findViewById(R.id.btnAlert)
-
         btnAlertDialog.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("タイトル")
@@ -29,70 +27,7 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
-////ボタン２め
-//        val btnAlertFragment: Button = findViewById(R.id.btnFragment)
-//        val customLayout = layoutInflater.inflate(R.layout.dialog_img, null)
-////        val btnDismissAlertDialog: Button = findViewById(R.id.alertDismiss)
-//
-//        btnAlertFragment.setOnClickListener {
-//            AlertDialog.Builder(this)
-//                .setView(customLayout)
-//                .setCancelable(false)
-//                .setNegativeButton("閉じる",findViewById(R.id.alertDismiss))
-//                .show()
-////                .setOnDismissListener(findViewBy¸Id(R.id.alertDismiss))
-//        }
-////        btnDismissAlertDialog.setOnClickListener {
-////            onDismiss(DialogFragment())
-////        }
-//    }
-////    fun onDismiss(dialogFragment: DialogFragment) {}
-//
-////    private fun onDismiss(mainActivity: MainActivity) {
-////
-////    }
-
-//ボタン２つめ作り直し
-//val btnAlertFragment: Button = findViewById(R.id.btnFragment)
-//    val customLayout = layoutInflater.inflate(R.layout.dialog_img, null)
-////        val btnDismissAlertDialog: Button = findViewById(R.id.alertDismiss)
-//
-//    btnAlertFragment.setOnClickListener {
-//        AlertDialog.Builder(this)
-//            .setView(customLayout)
-//            .setCancelable(false)
-//            .setNegativeButton("閉じる",findViewById(R.id.alertDismiss))
-//            .show()
-////                .setOnDismissListener(findViewBy¸Id(R.id.alertDismiss))
-//    }
-////        btnDismissAlertDialog.setOnClickListener {
-////            onDismiss(DialogFragment())
-////        }
-//}
-////    fun onDismiss(dialogFragment: DialogFragment) {}
-//
-////    private fun onDismiss(mainActivity: MainActivity) {
-////
-////    }
-
-////ボタンなし
-////    val customLayout = layoutInflater.inflate(R.layout.dialog_img, null)
-////        val btnDismissAlertDialog: Button = findViewById(R.id.alertDismiss)
-//        AlertDialog.Builder(this,R.style.ImageAlertDialog)
-////            .setView(customLayout)
-//            .setCancelable(false)
-//            .setNegativeButton(" ",null)
-//            .show()
-////            .setOnCancelListener(findViewById(R.id.alertDismiss))
-////            .getButton(findViewById(R.id.alertDismiss))
-////        setFinishOnTouchOutside(true)
-
-//ボタン無し改　アプリ起動時に自動で表示されるダイアログ（theme.xmlにてデザインをカスタマイズ）
-//        AlertDialog.Builder(this, R.style.ImageAlertDialog)
-//            .setCancelable(false)
-//            .setNegativeButton(" ", null)
-//            .show()
-//ボタン有り（２つめ）　下のボタンを押すと表示されるダイアログ（theme.xmlにてデザインをカスタマイズ(上記と同一部品)）
+//ボタン２つめ　下のボタンを押すと表示されるダイアログ（theme.xmlにてデザインをカスタマイズ(上記と同一部品)）
         val btnAlertFragment: Button = findViewById(R.id.btnFragment)
         btnAlertFragment.setOnClickListener {
             AlertDialog.Builder(this, R.style.ImageAlertDialog)
@@ -101,21 +36,10 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
-////        ボタン３つめ　ImgButtonのフラグメントを呼び出す
-//        val transaction = supportFragmentManager.beginTransaction()
+//ボタン３つめ　起動時の自動表示フラグメントを呼び出す
         val btnThird: Button = findViewById(R.id.btnThird)
-//        val fragmentLayout = layoutInflater.inflate(R.layout.view_img_button, null)
         btnThird.setOnClickListener {
-            val dialog = NewsFragment()
-                dialog.show(supportFragmentManager,"")
-//                .onCreateView(layoutInflater, null, null)
+            dialog.show(supportFragmentManager, "")
         }
-//                btnThird.setOnClickListener {
-//            val aiueo = NewsFragment()
-//            aiueo.onCreateView(layoutInflater,null,null)
-//        }
-
     }
 }
-
-//findViewById(R.id.alertDismiss)

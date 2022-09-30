@@ -12,37 +12,23 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-
     </style>
+
     <style name="ImageAlertDialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="buttonBarNegativeButtonStyle">@style/buttonBarButtonstyle.Negative</item>
         <item name="android:background">@drawable/touka002</item>
         <item name="android:textColor">@android:color/transparent</item>
         <item name="backgroundTint">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-<!--        <item name="android:background">@drawable/bushi_yoroikabuto</item>-->
-<!--        <item name="android:windowNoTitle">true</item>-->
-<!--        <item name="android:windowBackground">@drawable/bushi_yoroikabuto</item>-->
-<!--        <item name="android:textColor">@android:color/transparent</item>-->
-<!--        <item name="borderlessButtonStyle"> @drawable/bushi_yoroikabuto</item>-->
-<!--        <item name="buttonBarButtonStyle">@android:color/transparent</item>-->
-<!--        <item name="android:backgroundTint">@android:color/transparent</item>-->
     </style>
 
-    <!--    <style name="buttonBarButtonstyle" parent="Widget.AppCompat.Button.Colored">-->
     <style name="buttonBarButtonstyle" parent="Widget.AppCompat.Button.Borderless.Colored">
     </style>
+
     <style name="buttonBarButtonstyle.Negative">
         <item name="android:textColor">@android:color/transparent</item>
         <item name="backgroundTint">@android:color/transparent</item>
         <item name="android:background">@drawable/touka002</item>
-
     </style>
-
-<!--    <style name="buttonBarButtonstyle.Negative" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">-->
-<!--        <item name="android:textColor">@android:color/transparent</item>-->
-<!--        <item name="borderlessButtonStyle"> @drawable/bushi_yoroikabuto</item>-->
-<!--        <item name="buttonBarButtonStyle">@android:color/transparent</item>-->
-<!--    </style>-->
 
 </resources>
