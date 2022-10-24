@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnAlert"
+            android:id="@+id/btnFirst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -29,14 +29,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
-            android:id="@+id/btnFragment"
+            android:id="@+id/btnSecond"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/pop_alert_dialog"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnAlert" />
+            app:layout_constraintTop_toBottomOf="@+id/btnFirst" />
 
         <Button
             android:id="@+id/btnThird"
@@ -46,7 +46,7 @@
             android:text="@string/pop_fragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnFragment" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSecond" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

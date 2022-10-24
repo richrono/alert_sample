@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val dialog = NewsFragment()
         val data: SharedPreferences = getSharedPreferences("NewsShowed", Context.MODE_PRIVATE)
         val dataBoolean = data.getBoolean("NewsShowedBoolean", false)
-
         if (!dataBoolean) {
             dialog.show(supportFragmentManager, "")
             val editor = data.edit()
@@ -30,11 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 //ボタン１つめ　上のボタンを押すと表示される純粋なダイアログサンプル
-//        val btnAlertDialog: Button = findViewById(R.id.btnAlert)
-
-
-        binding.btnAlert.setOnClickListener {
-
+        binding.btnFirst.setOnClickListener {
             AlertDialog.Builder(this)
                 .setTitle("タイトル")
                 .setMessage("内容")
@@ -44,8 +39,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 //ボタン２つめ　下のボタンを押すと表示されるダイアログ（theme.xmlにてデザインをカスタマイズ(上記と同一部品)）
-//        val btnAlertFragment: Button = findViewById(R.id.btnFragment)
-        binding.btnFragment.setOnClickListener {
+        binding.btnSecond.setOnClickListener {
             AlertDialog.Builder(this, R.style.ImageAlertDialog)
                 .setCancelable(false)
                 .setNegativeButton(" ", null)
@@ -53,20 +47,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 //ボタン３つめ　起動時の自動表示フラグメントを呼び出す
-//        val btnThird: Button = findViewById(R.id.btnThird)
         binding.btnThird.setOnClickListener {
             dialog.show(supportFragmentManager, "")
         }
     }
-
-//    fun dismissDialog(view: View) {
-//        Log.d("Dialog","dissmissD")
-//
-//        val dialog = Dialog(this,)
-//        dialog.dismiss()
-//
-//        binding.imgBtnNews.setOnClickListener{
-//            dialog.dismiss()
-//        }
-//    }
 }
