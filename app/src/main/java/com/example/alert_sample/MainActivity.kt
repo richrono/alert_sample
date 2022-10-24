@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import com.example.alert_sample.databinding.ActivityMainBinding
 
@@ -56,7 +55,6 @@ class MainActivity : AppCompatActivity() {
 //ボタン３つめ　起動時の自動表示フラグメントを呼び出す
 //        val btnThird: Button = findViewById(R.id.btnThird)
         binding.btnThird.setOnClickListener {
-            Log.d("Dialog","00")
             dialog.show(supportFragmentManager, "")
         }
     }

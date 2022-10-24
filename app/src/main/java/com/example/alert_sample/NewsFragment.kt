@@ -4,26 +4,26 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.ImageButton
 import androidx.fragment.app.DialogFragment
+import com.example.alert_sample.databinding.FragmentNewsBinding
 
 class NewsFragment : DialogFragment(){
+    private lateinit var binding: FragmentNewsBinding
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = Dialog(this.requireActivity())
+        binding = FragmentNewsBinding.inflate(layoutInflater)
 
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.fragment_news)
+        dialog.setContentView(binding.root)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCanceledOnTouchOutside(false)
 
-        dialog.findViewById<ImageButton>(R.id.imgBtnNews)
-            .setOnClickListener{
+        binding.imgBtnNews.setOnClickListener{
                 dismiss()
             }
-        dialog.findViewById<ImageButton>(R.id.imgBtnClose)
-            .setOnClickListener{
+        binding.imgBtnClose.setOnClickListener{
                 dismiss()
             }
         return dialog
