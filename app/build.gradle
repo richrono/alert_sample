@@ -1,6 +1,8 @@
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -9,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.example.alert_sample"
         minSdk 23
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -21,6 +23,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        dataBinding true
+//        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
